@@ -41,6 +41,17 @@
 
 }
 
+#preload {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:9999;
+    background: url('../img/loading.gif') center center no-repeat rgba(34,34,34,0.9);
+
+}
+
 body {
     font-family: 'robotothin';
     background: #45484d; /* Old browsers */

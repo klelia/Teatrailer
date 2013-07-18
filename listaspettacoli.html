@@ -1,0 +1,18 @@
+ <ul id="listaSpettacoli">
+          <li ng-repeat="spett in lista.nodes">
+	     <a href="#/spettacolo/{{spett.node.nid}}">           
+             <img src="{{spett.node.field_sp_locandina_fid}}" class="thumbnail imgLista">
+	     </a>
+	    <div class="testoSpettacoli"> 
+		<a href="#/spettacolo/{{spett.node.nid}}">           
+		 <h3> {{spett.node.title}}</h3>
+		</a>
+             <p>
+                  <span class="dataSpettacoli">{{spett.node.field_data_spett_value}}</span>
+                  <span ng-hide="spett.node.field_cast_princ_value == null" class="regiaSpettacoli">{{spett.node.field_cast_princ_value}}</span>
+		  <span ng-hide="spett.node.field_descspett_value == null" class="descSpettacoli">{{spett.node.field_descspett_value}}</span>	
+                  <span ng-hide="spett.node.field_prg_teatro_nid_1 == null" class="doveSpettacoli">{{spett.node.field_prg_teatro_nid_1}}</span>
+             </p>
+            </div>
+	   </li>
+      </ul>

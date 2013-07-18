@@ -1,0 +1,24 @@
+
+ <img class="thumbnail imgSpettacolo" src="{{nodespe.nodes[0].node.field_sp_fototrailer_fid}}" ng-hide="nodespe.nodes[0].node.field_trailer_value != null">
+ <div ng-hide="nodespe.nodes[0].node.field_trailer_value == null">
+<video  ng-src="{{nodespe.basevideo}}{{nodespe.nodes[0].node.field_sp_stagione_value}}/{{nodespe.nodes[0].node.field_trailer_value}}"
+type="video/mp4" autoplay controls preload >
+        <!-- consumed by html5 video tag -->
+
+</video>
+</div>
+ <h1 class="titoloSpettacolo">{{nodespe.nodes[0].node.Titolo}}</h1>
+<p ng-hide="nodespe.nodes[0].node.field_cast_princ_value == null" class="sottotitoloSpettacolo">{{nodespe.nodes[0].node.field_cast_princ_value}}</p>
+ <ul id="listaSpettacolo">
+	
+	<li>
+	 <h2 class="titoliSpettacolo">CAST</h2>
+	<p>{{nodespe.nodes[0].node.Cast}}</p>
+	</li>
+
+	<li>
+          <h2 class="titoliSpettacolo">TRAMA</h2>
+	<p>{{nodespe.nodes[0].node.field_trama_value}}</p>
+	</li>
+ 
+

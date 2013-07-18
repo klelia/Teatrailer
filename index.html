@@ -1,0 +1,81 @@
+<html ng-app ="Teat">
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>index</title>
+  <meta name="description" content="" />
+  <meta name="author" content="Clelia" />
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <script src="angular.min.js"></script>
+  
+  <script src="controller.js"></script>
+   <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+           <script src="js/vendor/bootstrap.min.js"></script>
+
+  <script>
+  /*var myspett = new Object();
+  $(document).ready(init);
+  function init(){
+     $.getJSON("json/oggi-in-scena.json",readJSON ); 
+  }
+  function readJSON(datiJSON){
+      myspett = datiJSON;
+      //alert(myspett.spettacoli[0].title);
+      for(var pippo in myspett.nodes){
+          alert(myspett.nodes[pippo].node.title);
+      }
+      
+  }*/
+      </script>
+</head>
+
+<body>
+  <div>
+     <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                   <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+
+                    <a class="brand" href="index.html"><img src="img/logo.png"></a>
+                    <div class="nav-collapse collapse">
+			<ul class="nav">
+				<li><a href="#">Prova</a></li>
+				<li><a href="#">Prova</a></li>
+				<li><a href="#">Prova</a></li>
+			</ul>
+                    </div>
+		  <!--/.nav-collapse -->
+                     </div>
+            </div>
+        </div>
+
+	    <div ng-view>
+     
+	    </div>
+   
+    <footer>
+     <p>Powered by <a href="http://www.teatrailer.it">Teatrailer.it</a></p>
+    </footer>
+  </div>
+ 
+
+</body>
+</html>

@@ -27,11 +27,15 @@
            <script src="js/vendor/bootstrap.min.js"></script>
 
   <script>
-  /*var myspett = new Object();
-  $(document).ready(init);
+  /*var myspett = new Object();*/
+  $("body").ready(init);
   function init(){
-     $.getJSON("json/oggi-in-scena.json",readJSON ); 
+      $("#preload").css("display", "none");
+      
+      /* $.getJSON("json/oggi-in-scena.json",readJSON ); */
+
   }
+/*      
   function readJSON(datiJSON){
       myspett = datiJSON;
       //alert(myspett.spettacoli[0].title);
@@ -45,6 +49,7 @@
 </head>
 
 <body>
+    
   <div>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
@@ -76,7 +81,7 @@
      <p>Powered by <a href="http://www.teatrailer.it">Teatrailer.it</a></p>
     </footer>
   </div>
- 
+ <div id="preload"></div>
 
 </body>
 </html>

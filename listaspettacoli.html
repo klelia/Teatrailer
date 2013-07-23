@@ -1,4 +1,5 @@
- <ul id="listaSpettacoli">
+<div class='loader' ng-bind='lista.nasc' ng-hide="lista.nasc == 'prova'" ></div>
+ <ul id="listaSpettacoli" ng-cloak>
           <li ng-repeat="spett in lista.nodes">
 	     <a href="#/spettacolo/{{spett.node.nid}}">           
              <img src="{{spett.node.field_sp_locandina_fid}}" class="thumbnail imgLista">
@@ -16,3 +17,4 @@
             </div>
 	   </li>
       </ul>
+ 

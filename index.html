@@ -1,4 +1,4 @@
-<html ng-app ="Teat">
+<html ng-app ="Teat" >
 <head>
     
   <meta charset="utf-8" />
@@ -20,36 +20,16 @@
   <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <script src="angular.min.js"></script>
-  
-  <script src="controller.js"></script>
-   <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
-           <script src="js/vendor/bootstrap.min.js"></script>
-
-  <script>
-  /*var myspett = new Object();*/
-  $("body").ready(init);
-  function init(){
-      $("#preload").css("display", "none");
-      
-      /* $.getJSON("json/oggi-in-scena.json",readJSON ); */
-
-  }
-/*      
-  function readJSON(datiJSON){
-      myspett = datiJSON;
-      //alert(myspett.spettacoli[0].title);
-      for(var pippo in myspett.nodes){
-          alert(myspett.nodes[pippo].node.title);
-      }
-      
-  }*/
-      </script>
-       <link rel="stylesheet" href="css/main.css">
+  <script src="js/vendor/angular.min.js"></script>
+  <script src='js/vendor/iscroll.js'></script>
+  <script src="js/vendor/ng-iscroll.js"></script>
+  <script src="js/controller.js"></script>
+  <script type="text/javascript" src="js/vendor/jquery-1.10.1.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    
   <div>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
@@ -81,7 +61,7 @@
      <p>Powered by <a href="http://www.teatrailer.it">Teatrailer.it</a></p>
     </footer>
   </div>
- <div id="preload"></div>
+ 
 
 </body>
 </html>

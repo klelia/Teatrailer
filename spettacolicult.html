@@ -1,0 +1,20 @@
+<div class='loader' ng-bind='grid.nasc' ng-hide="grid.nasc == 'prova'" ></div>
+<div id="wrapper" ng-iscroll='wrapper' ng-iscroll-delay='50' ng-cloak>
+ <div id="scroller">
+       <div class="riga" ng-repeat="gspett in grid.nodes">
+	         
+             <img src="{{gspett.node.field_sp_fototrailer_fid}}" class="imgSpettCult">
+             <a href="#/spettacolo/{{gspett.node.nid}}">   <img src="img/play_large.png">
+	     </a>
+	    <div class="testo"> 
+		<a href="#/spettacolo/{{gspett.node.nid}}">           
+		 <h3> {{gspett.node.title_1}}</h3>
+		</a>
+             <p>
+                  <span class="dataSpettacoli">{{gspett.node.field_data_spett_value}}</span>
+                   <span ng-hide="gspett.node.title == null" class="">{{gspett.node.title}}</span>	
+                  <span ng-hide="gspett.node.province == null" class="">{{gspett.node.province}}</span>
+             </p>
+            </div>
+	   </div>
+      

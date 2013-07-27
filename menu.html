@@ -1,7 +1,14 @@
   <ul id="listaHome">
+       <a ng-href="#/viewg/{{firstitem.cult}}/{{firstitem.percorso}}" >
+           <li>
+        {{firstitem.titolo}}
+      </li>
+      </a>
+       </a>
       <a ng-href="#/view/{{item.citta}}/{{item.percorso}}" ng-repeat="item in menuitems">
       <li>
         {{item.titolo}}
       </li>
       </a>
 </ul>
+ 

@@ -14,6 +14,10 @@ function listaRouteConfig($routeProvider){
 	    controller: SpettacoliCult,
 	    templateUrl: 'spettacolicult.html'
 			}).
+	when('/viewm/:mappa/:percorso', {
+		controller: VediMappa,
+		templateUrl: 'mappa.html'
+					}).
 	when('/spettacolo/:nid', {
 		controller: VediSpettacolo,
 		templateUrl: 'spettacolo.html'
@@ -29,11 +33,12 @@ function MenuPage($scope,$http){
 	var firstitem = {'titolo':'In scena','cult':'tutte','percorso':'oggi-in-scena'};
 	var menuitems = [
 	                 {'titolo':'Roma', 'citta':'rm','percorso':'oggi-in-scena'},
-	                 {'titolo':'Milano','citta':'mi', 'percorso':'oggi-in-scena'},
-	                 {'titolo':'Altre città','citta':'altre', 'percorso':'oggi-in-scena'}
-	                 ];
+	                 {'titolo':'Milano','citta':'mi', 'percorso':'oggi-in-scena'}
+	                  ];
+	var lastitem =  {'titolo':'Altre città','mappa':'allmap', 'percorso':'oggi-in-scena'};
 	$scope.menuitems = menuitems;
 	$scope.firstitem = firstitem;
+	$scope.lastitem  = lastitem;
 }
 
 function ListaSpettacoli($scope,$routeParams,$http){
@@ -75,4 +80,45 @@ function VediSpettacolo($scope,$routeParams,$http){
 			$scope.status = status;
 		});
 }
-
+function VediMappa($scope,$routeParams,$http) {
+		    //geolocation stuff!
+		    var geoError = function(error){
+		        var errors = {
+		            1: 'Permission denied',
+		            2: 'Position unavailable',
+		            3: 'Request timeout'
+		        };
+		        $scope.positionError = ("Error: " + errors[error.code]);
+		    };
+		    //search images after position acquired
+		    var positionAcquired = function(position){
+		        console.log('position acquired', position);
+		        searchImages(position);
+		    };
+		    var geolocate = function(){
+		        if (navigator.geolocation) {
+		            var timeoutVal = 10 * 1000 * 1000;
+		            navigator.geolocation.getCurrentPosition(
+		                positionAcquired,
+		                geoError,
+		                { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
+		            );
+		        }
+		        else {
+		 
+		        }
+		    };
+		    geolocate();
+		    var successCallback = function(resp, status, headers, config){
+		        console.log(resp);
+		        $scope.images = resp.data;
+		    };
+		    var searchImages = function(position){
+		         var config = {
+		                lat: position.coords.latitude,
+		                lng: position.coords.longitude,
+		                };
+		       
+		    }
+		}
+	  

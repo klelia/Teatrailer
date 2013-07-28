@@ -1,4 +1,4 @@
-var aTeatrailerServices=angular.module('Teat',['ng-iscroll']);
+var aTeatrailerServices=angular.module('Teat',['ng-iscroll','ui']);
 
 function listaRouteConfig($routeProvider){
 	$routeProvider.
@@ -114,11 +114,40 @@ function VediMappa($scope,$routeParams,$http) {
 		        $scope.images = resp.data;
 		    };
 		    var searchImages = function(position){
-		         var config = {
-		                lat: position.coords.latitude,
-		                lng: position.coords.longitude,
-		                };
+		         var mialat = position.coords.latitude;
+		          var mialng = position.coords.longitude;
+		             
+		         
 		       
 		    }
+		    $scope.myMarkers = [];
+		     
+		    $scope.mapOptions = {
+		   		      center: new google.maps.LatLng(45, -71),
+		   		      zoom: 15,
+		   		      mapTypeId: google.maps.MapTypeId.ROADMAP
+		   		    };		     
+		    $scope.addMarker = function($event) {
+		      $scope.myMarkers.push(new google.maps.Marker({
+		        map: $scope.myMap,
+		        position: $event.latLng
+		      }));
+		    };
+		     
+		    $scope.setZoomMessage = function(zoom) {
+		      $scope.zoomMessage = 'You just zoomed to '+zoom+'!';
+		      console.log(zoom,'zoomed')
+		    };
+		     
+		    $scope.openMarkerInfo = function(marker) {
+		      $scope.currentMarker = marker;
+		      $scope.currentMarkerLat = marker.getPosition().lat();
+		      $scope.currentMarkerLng = marker.getPosition().lng();
+		      $scope.myInfoWindow.open($scope.myMap, marker);
+		    };
+		     
+		    $scope.setMarkerPosition = function(marker, lat, lng) {
+		      marker.setPosition(new google.maps.LatLng(lat, lng));
+		    };
 		}
 	  

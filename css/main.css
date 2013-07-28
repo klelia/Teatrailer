@@ -48,7 +48,7 @@
     top:0;
     left:0;
     z-index:9999;
-    background: url('../img/loading.gif') center center no-repeat rgba(34,34,34,0.9);
+    background: url('../img/loading.gif') center center no-repeat rgba(0,0,0,0.9);
 
 }
 
@@ -69,6 +69,12 @@ h3 {
     font-size: 20px;
     padding: 0px;
     margin-bottom: 0px;
+}
+
+h3.titoloSlideshow {
+    color:#fff;
+    font-size: 24px;
+    
 }
 
 a:hover {
@@ -188,8 +194,14 @@ ul#listaSpettacoli span {
 .testoSpettacoli {
     padding-left:160px;
     padding-right:30px;
-
 }
+
+.testoSpettacoliVideo {
+    padding-left:160px;
+    padding-right:30px;
+    margin-top: -34px;
+}
+
 .dataSpettacoli {
     font-size:11px;
     color:#e0e0e0;
@@ -204,6 +216,21 @@ ul#listaSpettacoli span {
 .regiaSpettacoli {
     color:#fff;
 }
+img.butplay {
+	float:left;
+	margin-left: -60px;
+	margin-top: 67px;
+	opacity: 0.8;
+}
+/*.playSpettacoli {
+    left: -60px;
+    width: 35px;
+    opacity: 0.8;
+    position: relative;
+    top: 67px;
+    overflow:visible;
+    height:auto !important;
+}*/
 
 h2.titoliSpettacolo {
     color: #FFEB00;
@@ -231,6 +258,30 @@ ul#listaSpettacolo li p {
     margin-top: 3px;
 }
 
+.carousel-caption {
+    padding: 5px 15px !important;
+     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.65) !important;
+}
+
+.playSlideshow {
+    float: right;
+    position: relative;
+    right: 0px;
+    top: -35px;
+}
+.cittaSlideshow {
+    color: #FFEB00;
+    font-weight:600;
+}
+
+.testoSlideshow {
+    background: none repeat scroll 0 0 rgba(34, 34, 34, 0.7);
+    padding: 15px 20px;
+    position: relative;
+    top: -120px;   
+}
+
+
 /* added Clelia */
 #wrapper {
 	width:100%;
@@ -252,20 +303,9 @@ ul#listaSpettacolo li p {
    float:left;
 	width:19%;
 	height:100%;
-	padding:0 1% 0 0;
+	padding:0 0.5%;
 	margin:0;
 	text-align:left;
 }
 
-/*#scroller li {
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-o-box-sizing:border-box;
-	box-sizing:border-box;
-	display:block; float:left;
-	width:300px; height:160px;
-	text-align:center;
-	font-family:georgia;
-	font-size:18px;
-	line-height:140%;
-}*/
+

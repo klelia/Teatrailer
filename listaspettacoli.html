@@ -3,9 +3,13 @@
           <li ng-repeat="spett in lista.nodes">
 	     <a href="#/spettacolo/{{spett.node.nid}}">           
              <img src="{{spett.node.field_sp_locandina_fid}}" class="thumbnail imgLista">
+<<<<<<< HEAD
              <img src="img/playtr_red.png" ng-hide="spett.node.field_trailer_value == null" class="butplay">
+=======
+          <span class="playSpettacoli"><img src="img/playtr_red.png"></span>
+>>>>>>> 9663ca0a288a49800e5779894bbfcab67823bb84
 	     </a>
-	    <div class="testoSpettacoli"> 
+	    <div class="testoSpettacoliVideo"> 
 		<a href="#/spettacolo/{{spett.node.nid}}">           
 		 <h3> {{spett.node.title}}</h3>
 		</a>
@@ -18,4 +22,6 @@
             </div>
 	   </li>
       </ul>
+ 
+ 
  
